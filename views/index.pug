@@ -17,9 +17,9 @@ html
           .recipes__items
             each recipe in recipes
               .recipe
-                img.recipe__image(src=recipe.imageUrl)
+                img.recipe__image(src="https://assets.afcdn.com/recipe/20221028/136792_w1000h667c1cx1063cy700cxb2121cyb1414.webp")
                 .recipe__main
                   .recipe__name #{recipe.name}
                   .recipe__categories
-                    each categoryId in recipe.categories 
-                      .recipe__category.tag #{categories[categoryId].name}
+                    .recipe__category.tag Plat
+                    .recipe__category.tag De Saison
