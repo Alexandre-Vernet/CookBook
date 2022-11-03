@@ -1,0 +1,24 @@
+.form
+    h1 Création d'une recette
+    form
+        label(for="name") Nom de la recette
+        input#name(type="text", name="name")
+    select(name="categories")
+        option(value="") Choisissez une catégorie
+        option(value="entre") Entrée
+        option(value="plat") Plat
+        option(value="dessert") Dessert
+    label(for="time") Temps de préparation en minute
+    input#time(type="text", name="time")
+    select(name="difficulty")
+        option(value="") Difficulté sur 5
+        option(value="1") 1
+        option(value="2") 2
+        option(value="3") 3
+        option(value="4") 4
+        option(value="5") 5
+    label(for="description") Préparation
+    textarea#description(name="description", cols="30", rows="5")
+    label(for="ingredients") Ingrédients :
+        textarea#ingredients(name="ingredients", cols="30", rows="5")
+    button(type="submit") Submit
