@@ -8,20 +8,9 @@ const app = express();
 
 app.set('view engine', 'pug');
 
-mongoose.connect(process.env.MONGO_DB_URI,
-    {
-        dbName: 'cookbook',
-    }
-    )
+mongoose.connect(process.env.MONGO_DB_URI, { dbName: 'cookbook', })
     .then(async () => {
         console.log('Connected to database');
-
-        // Get data from table recipes
-        Recipes.find({})
-            .then((result: any) => {
-                    console.log(result);
-                }
-            );
         app.listen(3000, () => {
             console.info('Server started on port 3000');
         });
@@ -29,5 +18,11 @@ mongoose.connect(process.env.MONGO_DB_URI,
     .catch(console.error);
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('Hello world!');
+
+    // Get data from table recipes and pass it to the view
+    Recipes.find({})
+        .then((result: any) => {
+                res.render('index', { recipes: result });
+            }
+        );
 });
