@@ -1,0 +1,25 @@
+html
+  head 
+    title= title
+    style 
+      include css/style.css
+  body 
+    #app
+      .sidebar
+        .sidebar__logo CookBook
+        .sidebar__menu
+          a.sidebar__menu-item(href="/") Accueil
+          a.sidebar__menu-item(href="/") Ajouter une recette
+      main.main
+        .recipes
+          h1.recipes__title Les meilleurs recettes
+          p.recipes__subtitle Voici une sélection des recettes préférées de CookBook
+          .recipes__items
+            each recipe in recipes
+              .recipe
+                img.recipe__image(src=recipe.imageUrl)
+                .recipe__main
+                  .recipe__name #{recipe.name}
+                  .recipe__categories
+                    each categoryId in recipe.categories 
+                      .recipe__category.tag #{categories[categoryId].name}
