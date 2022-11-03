@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+
 const express = require('express');
 const mongoose = require('mongoose');
 const Recipes = require('./schemas/Recipes');
@@ -7,8 +8,12 @@ const app = express();
 
 app.set('view engine', 'pug');
 
-mongoose.connect(process.env.MONGO_DB_URI)
-    .then(() => {
+mongoose.connect(process.env.MONGO_DB_URI,
+    {
+        dbName: 'cookbook',
+    }
+    )
+    .then(async () => {
         console.log('Connected to database');
 
         // Get data from table recipes
