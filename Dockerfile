@@ -1,2 +1,10 @@
-FROM node:2.18
+FROM node:18
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm ci 
+
+RUN npm run dev
 
