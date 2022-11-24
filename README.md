@@ -1,13 +1,38 @@
-# CookBook
+# CookBook - Groupe 5
 
-I. Technos :
+Création d'une plateforme de recettes de cuisine.
+
+### Technologies
 
 - Front : Pug - CSS
 - Back : Node - Express (TS)
 - BDD : MongoDB
 - Github
 
-II. Fonctionnalités :
+### Clone project
+
+Clonez le project en suivant les commandes suivantes:
+
+```
+git clone https://github.com/Alexandre-Vernet/CookBook.git
+git checkout dev
+
+```
+
+2 branches principales vous seront présentés : "main" et "dev" 
+
+## Démarrage
+
+Installer le modules inclus dans le package.json et lancer le project en suivant les commandes : 
+
+```
+npm install 
+npm run dev
+
+```
+
+### Fonctionnalités 
+
 
 - CRUD utilisateurs
 - CRUD recettes
@@ -24,19 +49,8 @@ II. Fonctionnalités :
 - Ses follows
 - Liker et Commenter des recettes
 
-III. Objectifs pour aujourd’hui :
-1. Front
-- CRUD recettes (affiche de 12 recettes)
-2. Back
-- Créer la base de données
-- Connexion BDD
-- CRUD recettes
 
-
-
-
-
-IV. Relation BDD
+### Conception BDD 
 
 User :
 - id : string
@@ -76,6 +90,7 @@ Category :
 - name : string
 
 
+
 ## API
 
 ### GET '/form'
@@ -89,7 +104,6 @@ Renvoie la vue du formulaire
 - description: string
 - ingredients: string
 - Et retourne la vue du formulaire
-
 
 ### Port du serveur
 Ecoute du serveur sur le port 3000
