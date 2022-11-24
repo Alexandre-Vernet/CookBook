@@ -1,6 +1,8 @@
-# CookBook
+# CookBook - Groupe 5
 
-I. Technos :
+Création d'une plateforme de recettes de cuisine.
+
+### Technologies
 
 - Front : Pug - CSS
 - Back : Node - Express (TS)
@@ -41,16 +43,6 @@ III. Fonctionnalités :
 - Ses likes
 - Ses follows
 - Liker et Commenter des recettes
-
-IV. Objectifs pour aujourd’hui :
-1. Front
-- CRUD recettes (affiche de 12 recettes)
-2. Back
-- Créer la base de données
-- Connexion BDD
-- CRUD recettes
-
-
 
 
 
@@ -107,7 +99,6 @@ Renvoie la vue du formulaire
 - description: string
 - ingredients: string
 - Et retourne la vue du formulaire
-
 
 ### Port du serveur
 Ecoute du serveur sur le port 3000
