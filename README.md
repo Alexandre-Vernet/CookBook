@@ -2,38 +2,57 @@
 
 Création d'une plateforme de recettes de cuisine.
 
-### Technologies
+## Technologies
 
 - Front : Pug - CSS
 - Back : Node - Express (TS)
 - BDD : MongoDB
 - Github
 
-### Clone project
+### Lancement du projet
 
-Clonez le project en suivant les commandes suivantes:
-
+Copier le fichier d'environnement
 ```
-git clone https://github.com/Alexandre-Vernet/CookBook.git
-git checkout dev
-
+cp .env.example .env
 ```
+Compléter le champ MONGO_DB_URI du fichier .env avec l'URL de connexion à la base de données (obtenu via mongodb)
 
-2 branches principales vous seront présentés : "main" et "dev" 
+Installer les dépendances avec la commande suivante
+````
+npm install
+````
 
-## Démarrage
-
-Installer le modules inclus dans le package.json et lancer le project en suivant les commandes : 
-
-```
-npm install 
+Démarrer le projet en mode développement
+````
 npm run dev
-
-```
-
-### Fonctionnalités 
+````
 
 
+### Docker
+
+Créer l'image docker à partir du Dockerfile
+````
+docker build -t cook-book .
+````
+
+Lancer le container
+````
+docker run -p 3000:3000 cook-book
+````
+
+## Objectifs pour aujourd’hui (24/11) :
+- [x] Corriger les remarques des autres étudiants sur notre code
+  - [x] Supprimer les console.log
+  - [x] Mettre à jour le READ.ME
+  - [x] Créer un dockerignore
+  - [x] Ajouter le "EXPOSE" dans le Dockerfile
+  - [x] Copier le package-lock.json et le package.json AVANT de tout copier dans le Dockerfile
+  - [ ] Renommer le commit non-approprié
+- [x] Terminer le Dockerfile
+- [x] Créer le conteneur pour le SSO 
+- [ ] Ajouter un SSO (OAuth 2.0)
+
+## Fonctionnalités :
 - CRUD utilisateurs
 - CRUD recettes
 - CRUD liste de recettes
@@ -49,8 +68,7 @@ npm run dev
 - Ses follows
 - Liker et Commenter des recettes
 
-
-### Conception BDD 
+## Relation BDD
 
 User :
 - id : string
@@ -88,7 +106,6 @@ Ingredient :
 Category :
 - id : string
 - name : string
-
 
 
 ## API
