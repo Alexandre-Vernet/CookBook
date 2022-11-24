@@ -11,7 +11,6 @@ app.set("view engine", "pug");
 mongoose
   .connect(process.env.MONGO_DB_URI, { dbName: "cookbook" })
   .then(async () => {
-    console.log("Connected to database");
     app.listen(3000, () => {
       console.info("Server started on port 3000");
     });
