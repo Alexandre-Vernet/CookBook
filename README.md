@@ -7,7 +7,25 @@ I. Technos :
 - BDD : MongoDB
 - Github
 
-II. Fonctionnalités :
+II. Lancement du projet
+
+Copier le fichier d'environnement
+```
+cp .env.example .env
+```
+Compléter le champ MONGO_DB_URI du fichier .env avec l'URL de connexion à la base de données (obtenu via mongodb)
+
+Installer les dépendances avec la commande suivante
+````
+npm install
+````
+
+Démarrer le projet en mode développement
+````
+npm run dev
+````
+
+III. Fonctionnalités :
 
 - CRUD utilisateurs
 - CRUD recettes
@@ -24,7 +42,7 @@ II. Fonctionnalités :
 - Ses follows
 - Liker et Commenter des recettes
 
-III. Objectifs pour aujourd’hui :
+IV. Objectifs pour aujourd’hui :
 1. Front
 - CRUD recettes (affiche de 12 recettes)
 2. Back
@@ -36,7 +54,7 @@ III. Objectifs pour aujourd’hui :
 
 
 
-IV. Relation BDD
+V. Relation BDD
 
 User :
 - id : string
