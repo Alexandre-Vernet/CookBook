@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import * as mongoose from "mongoose";
 
 const RecipeSchema = new mongoose.Schema({
   name: String,
@@ -15,4 +15,4 @@ const RecipeSchema = new mongoose.Schema({
 
 const Recipes = mongoose.model("recipes", RecipeSchema);
 
-module.exports = Recipes;
+export default Recipes;

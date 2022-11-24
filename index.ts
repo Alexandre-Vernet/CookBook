@@ -1,18 +1,19 @@
-import { Request, Response } from "express";
+import express, { Express, Request, Response } from "express";
+import dotenv from "dotenv";
+import * as mongoose from "mongoose";
+import Recipes from "./schemas/Recipes";
 
-const express = require("express");
-const mongoose = require("mongoose");
-const Recipes = require("./schemas/Recipes");
-require("dotenv").config();
-const app = express();
+dotenv.config();
 
+const app: Express = express();
+const port = process.env.PORT;
 app.set("view engine", "pug");
 
 mongoose
   .connect(process.env.MONGO_DB_URI, { dbName: "cookbook" })
   .then(async () => {
-    app.listen(3000, () => {
-      console.info("Server started on port 3000");
+    app.listen(port, () => {
+      console.info(`Server started on port ${port}`);
     });
   })
   .catch(console.error);

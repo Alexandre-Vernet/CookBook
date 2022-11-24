@@ -1,4 +1,4 @@
-// const mongoose = require('mongoose');
+import * as mongoose from "mongoose";
 
 const LikeSchema = new mongoose.Schema({
   // name: String,
@@ -8,4 +8,4 @@ const LikeSchema = new mongoose.Schema({
 
 const Likes = mongoose.model("likes", LikeSchema);
 
-module.exports = Recipes;
+export default Likes;
