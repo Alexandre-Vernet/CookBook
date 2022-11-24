@@ -37,7 +37,7 @@ docker build -t cook-book .
 
 Lancer le container
 ````
-docker run -p 3000:3000 cook-book
+docker run -p 3000:3000 --name "cook-book" cook-book
 ````
 
 ## Objectifs pour aujourd’hui (24/11) :
