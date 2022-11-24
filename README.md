@@ -2,14 +2,14 @@
 
 Création d'une plateforme de recettes de cuisine.
 
-### Technologies
+## Technologies
 
 - Front : Pug - CSS
 - Back : Node - Express (TS)
 - BDD : MongoDB
 - Github
 
-II. Lancement du projet
+### Lancement du projet
 
 Copier le fichier d'environnement
 ```
@@ -27,8 +27,32 @@ Démarrer le projet en mode développement
 npm run dev
 ````
 
-III. Fonctionnalités :
 
+### Docker
+
+Créer l'image docker à partir du Dockerfile
+````
+docker build -t cook-book .
+````
+
+Lancer le container
+````
+docker run -p 3000:3000 cook-book
+````
+
+## Objectifs pour aujourd’hui (24/11) :
+- [x] Corriger les remarques des autres étudiants sur notre code
+  - [x] Supprimer les console.log
+  - [x] Mettre à jour le READ.ME
+  - [x] Créer un dockerignore
+  - [x] Ajouter le "EXPOSE" dans le Dockerfile
+  - [x] Copier le package-lock.json et le package.json AVANT de tout copier dans le Dockerfile
+  - [ ] Renommer le commit non-approprié
+- [x] Terminer le Dockerfile
+- [x] Créer le conteneur pour le SSO 
+- [ ] Ajouter un SSO (OAuth 2.0)
+
+## Fonctionnalités :
 - CRUD utilisateurs
 - CRUD recettes
 - CRUD liste de recettes
@@ -44,9 +68,7 @@ III. Fonctionnalités :
 - Ses follows
 - Liker et Commenter des recettes
 
-
-
-V. Relation BDD
+## Relation BDD
 
 User :
 - id : string
