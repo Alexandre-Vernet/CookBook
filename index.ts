@@ -20,6 +20,5 @@ mongoose
 app.get("/", async (req: Request, res: Response) => {
   // Get data from table recipes and pass it to the view
   const recipes = await Recipes.find({});
-  console.log(recipes);
   res.render("index", { recipes: recipes });
 });
