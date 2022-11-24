@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm ci 
- 
+RUN npm ci
+
 CMD [ "npm","run", "start"]
 
+EXPOSE 3000
