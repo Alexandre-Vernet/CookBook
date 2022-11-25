@@ -40,7 +40,14 @@ Lancer le container
 docker run -p 3000:3000 --name "cook-book" cook-book
 ````
 
-## Objectifs pour aujourd’hui (24/11) :
+## Objectifs pour aujourd’hui (25/11) :
+- [ ] Authentification Basic
+- [ ] Formulaire de connection
+- [ ] Authentification SSO (OAuth 2.0)
+- [ ] Diagramme UML
+
+
+## Objectifs pour le (24/11) :
 - [x] Corriger les remarques des autres étudiants sur notre code
   - [x] Supprimer les console.log
   - [x] Mettre à jour le READ.ME
@@ -50,8 +57,6 @@ docker run -p 3000:3000 --name "cook-book" cook-book
   - [ ] Renommer le commit non-approprié
 - [x] Terminer le Dockerfile
 - [x] Créer le conteneur pour le SSO 
-- [ ] Ajouter un SSO (OAuth 2.0)
-
 ## Fonctionnalités :
 - CRUD utilisateurs
 - CRUD recettes
