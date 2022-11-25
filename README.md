@@ -43,10 +43,8 @@ docker run -p 3000:3000 --name "cook-book" cook-book
 
 ## Objectifs pour aujourd’hui (25/11) :
 - [ ] Authentification Basic
-- [ ] Formulaire de connection
-- [ ] Authentification SSO (OAuth 2.0)
+- [x] Authentification SSO (OAuth 2.0) (https://cookbook-ynov.tk/)
 - [ ] Diagramme UML
-
 
 ## Objectifs pour le (24/11) :
 - [x] Corriger les remarques des autres étudiants sur notre code
@@ -115,12 +113,13 @@ Category :
 
 ## Documentation
 
-### UML
+### Architecture
 
-Suivre le lien pour visualiser la documentation UML
+Suivre le lien pour visualiser la documentation Architecture
 
 ````
 https://app.diagrams.net/#G1LRVR_1aQ0z_qsPEz4WjehcDGyiFwqGDn
+
 ````
 
 
