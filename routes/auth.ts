@@ -1,36 +1,51 @@
-import {Callback} from "mongoose";
+import { Callback } from "mongoose";
 
-var express = require('express');
+const express = require("express");
 
-import {Request, Response} from 'express';
+import { Request, Response } from "express";
 
-const passport = require('passport');
-const LocalStrategy = require('passport-local');
-const crypto = require('crypto');
-import Users from '../schemas/Users';
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+import crypto from "crypto";
+import Users from "../schemas/Users";
 
-var router = express.Router();
+const router = express.Router();
 
-router.get('/login', function(req: Request, res: Response, next: Callback) {
-    res.render('login');
+passport.use(
+  new LocalStrategy(function (
+    username: string,
+    password: string,
+    done: Function
+  ) {
+    Users.findOne({ username: username }, function (err: Error, user: any) {
+      return done(null, { email: "jean@test.com", password: "13456" });
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false);
+      }
+      if (!user.verifyPassword(password)) {
+        return done(null, false);
+      }
+      return done(null, user);
+    });
+  })
+);
+
+router.get("/login", function (req: Request, res: Response, next: Callback) {
+  res.render("login");
 });
 
-router.post('/login/password', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-}));
-
-passport.use(new LocalStrategy(function verify(email: string, password: string, cb: Function) {
-    const user: any = Users.findOne({email});
-
-    crypto.pbkdf2(password, '4=K1Ho,5?@vXhB>E:W*q#LqwpTM#BB37y-> KsZ8+{Ul%=qHdSkXTPQW`+PQ0M<t', 310000, 32, 'sha256', function(err: Error, hashedPassword: string) {
-        console.log('coucou')
-        if (err) { return cb(err); }
-        if (!crypto.timingSafeEqual(user.password, hashedPassword)) {
-            return cb(null, false, { message: 'Incorrect username or password.' });
-        }
-        return cb(null, user);
-    });
-}));
+router.post(
+  "/login/password",
+  passport.authenticate("local", {
+    successRedirect: "/success",
+    failureRedirect: "/login/failure",
+  }),
+  (req: unknown, res: any, next: unknown) => {
+    res.render("salut");
+  }
+);
 
 module.exports = router;
