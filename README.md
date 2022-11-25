@@ -113,13 +113,26 @@ Category :
 
 ## Documentation
 
+
+### Mise en place du SSO via oauth2-proxy
+
+- Création d’un nom de domaine via Freenom
+- Changement de Nameserver Freenom -> Cloudflare
+- Ajout de la redirection dans le Proxy Manager et ajout du SSL (51.159.195.95:4180 -> https://cookbook-ynov.tk)
+- Création des identifiant OAuth 2.0 chez Google et ajout de l’url autorisée et de l’url de callback
+- Déploiement du conteneur oauth2 et configuration des variables d’environnement 
+
+<img width="994" alt="Capture d’écran 2022-11-25 à 14 59 21" src="https://user-images.githubusercontent.com/15053364/204001683-9df163ea-0221-457d-aacb-a30da3e64543.png">
+
+Connexion et déconnexion en ligne sur https://cookbook-ynov.tk
+
+
 ### Architecture
 
 Suivre le lien pour visualiser la documentation Architecture
 
 ````
 https://app.diagrams.net/#G1LRVR_1aQ0z_qsPEz4WjehcDGyiFwqGDn
-
 ````
 
 
