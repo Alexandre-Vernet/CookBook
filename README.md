@@ -112,6 +112,16 @@ Category :
 - id : string
 - name : string
 
+## Documentation
+
+### UML
+
+Suivre le lien pour visualiser la documentation UML
+
+````
+https://app.diagrams.net/#G1LRVR_1aQ0z_qsPEz4WjehcDGyiFwqGDn
+````
+
 
 ## API
 
