@@ -1,15 +1,16 @@
 html
-  head 
+  head
     title= title
-    style 
+    style
       include css/style.css
-  body 
+  body
     #app
       .sidebar
         .sidebar__logo CookBook
         .sidebar__menu
           a.sidebar__menu-item(href="/") Accueil
           a.sidebar__menu-item(href="/") Ajouter une recette
+          a.sidebar__menu-item(href="/oauth2/sign_out") Deconnexion
       main.main
         .recipes
           h1.recipes__title Les meilleurs recettes
