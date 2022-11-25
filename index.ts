@@ -10,7 +10,7 @@ const port = process.env.PORT;
 app.set("view engine", "pug");
 
 mongoose
-  .connect(process.env.MONGO_DB_URI, { dbName: "cookbook" })
+  .connect(`${process.env.MONGO_DB_URI}`, { dbName: "cookbook" })
   .then(async () => {
     app.listen(port, () => {
       console.info(`Server started on port ${port}`);
