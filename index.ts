@@ -8,6 +8,7 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT;
 app.set("view engine", "pug");
+const authRouter = require('./routes/auth');
 
 mongoose
   .connect(`${process.env.MONGO_DB_URI}`, { dbName: "cookbook" })
@@ -23,3 +24,5 @@ app.get("/", async (req: Request, res: Response) => {
   const recipes = await Recipes.find({});
   res.render("index", { recipes: recipes });
 });
+
+app.use('/', authRouter);

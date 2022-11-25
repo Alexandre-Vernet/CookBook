@@ -1,0 +1,20 @@
+html
+    head
+        title=register
+        style
+            include css/register.css
+    body
+        #app
+            form.register(role='form' method='POST' action='/register')
+                h2.title Register
+
+                label(for="email") Email
+                input#email(type="text", name="email")
+
+                label(for="password") Password
+                input#password(type="text", name="password")
+
+                label(for="confirmPassword") Confirm your password
+                input#confirmPassword(type="text", name="confirmPassword")
+
+                button.submitBtn(type="submit", value="Submit") Submit

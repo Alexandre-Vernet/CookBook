@@ -1,0 +1,16 @@
+html
+    head
+        title=login
+        style
+            include css/login.css
+    body
+        #app
+            h1 Login
+            form(method='POST' action='/login/password')
+                label(for="email") Email
+                input#email(type="email", name="email")
+
+                label(for="password") Password
+                input#password(type="password", name="password")
+
+                button(type="submit") Login
