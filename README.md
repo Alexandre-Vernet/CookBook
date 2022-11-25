@@ -15,7 +15,8 @@ Copier le fichier d'environnement
 ```
 cp .env.example .env
 ```
-Compléter le champ MONGO_DB_URI du fichier .env avec l'URL de connexion à la base de données (obtenu via mongodb)
+- Compléter le champ MONGO_DB_URI du fichier .env avec l'URL de connexion à la base de données (obtenu via mongodb)
+- Compléter le champ PORT
 
 Installer les dépendances avec la commande suivante
 ````
